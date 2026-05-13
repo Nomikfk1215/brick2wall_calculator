@@ -4,7 +4,8 @@
 
 ## Verification
 
-- [ ] `go test ./...`
+- [ ] `npm test`
+- [ ] `npm run serve`
 
 ## Notes
 

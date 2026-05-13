@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BrickWall Planner</title>
+    <link rel="stylesheet" href="src/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="workspace" aria-label="砖墙排布计算器">
+        <form id="wall-form" class="panel controls">
+          <div>
+            <p class="eyebrow">BrickWall Planner</p>
+            <h1>标准砖排布计算器</h1>
+          </div>
+
+          <label>
+            <span>墙长 mm</span>
+            <input id="wall-length" name="length" type="number" min="240" step="10" value="2400">
+          </label>
+
+          <label>
+            <span>墙高 mm</span>
+            <input id="wall-height" name="height" type="number" min="53" step="10" value="1200">
+          </label>
+
+          <label>
+            <span>墙厚 mm</span>
+            <input id="wall-thickness" name="thickness" type="number" min="115" step="5" value="240">
+          </label>
+
+          <button type="submit">重新计算</button>
+          <p id="form-error" class="error" role="alert"></p>
+        </form>
+
+        <section class="panel result">
+          <div id="metrics" class="metrics" aria-live="polite"></div>
+          <div class="preview-head">
+            <h2>2D 排布预览</h2>
+            <span>红色为整砖，蓝色为半砖</span>
+          </div>
+          <svg id="layout-preview" class="layout-preview" role="img" aria-label="砖墙排布图"></svg>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>

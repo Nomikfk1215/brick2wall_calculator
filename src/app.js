@@ -8,9 +8,9 @@ const preview = document.querySelector("#layout-preview");
 
 function readForm() {
   return {
-    length: form.elements.length.value,
-    height: form.elements.height.value,
-    thickness: form.elements.thickness.value
+    length: document.getElementById("wall-length").value,
+    height: document.getElementById("wall-height").value,
+    thickness: document.getElementById("wall-thickness").value
   };
 }
 

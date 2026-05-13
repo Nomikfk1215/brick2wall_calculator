@@ -1,10 +1,10 @@
 # BrickWall Planner Demo
 
-这是给 ByteMind 路演使用的“客户同学砖墙排布计算器”示例仓库。它保持最小依赖：页面使用原生 HTML/CSS/JavaScript，测试使用 Node.js 内置测试框架。
+这是一个砖墙排布计算器仓库。它保持最小依赖：页面使用原生 HTML/CSS/JavaScript，测试使用 Node.js 内置测试框架。
 
 ## 业务背景
 
-客户同学想做一个小工具：输入墙体的长、高、厚，自动输出：
+输入墙体的长、高、厚，自动输出：
 
 - 推荐灰缝尺寸，范围为 8-12mm 的整数。
 - 标准砖排布数据。
@@ -31,4 +31,3 @@ http://localhost:5173
 npm test
 ```
 
-当前预期会有一个失败测试，留给路演第三段 issue -> debug -> commit 使用。

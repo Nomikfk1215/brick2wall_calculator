@@ -1,4 +1,4 @@
-# BrickWall Planner Demo
+# Brick2Wall Calculator
 
 这是一个砖墙排布计算器仓库。它保持最小依赖：页面使用原生 HTML/CSS/JavaScript，测试使用 Node.js 内置测试框架。
 

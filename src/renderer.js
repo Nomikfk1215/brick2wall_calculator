@@ -22,7 +22,8 @@ export function renderMetrics(container, plan) {
 
   appendMetric(container, "推荐灰缝", `${plan.mortarSize}mm`);
   appendMetric(container, "采购总砖数", `${plan.purchaseBricks} 块`);
-  appendMetric(container, "图中砖件", `${plan.pieceCount} 件`);
+  appendMetric(container, "实际墙高", `${plan.usedHeight}mm`);
+  appendMetric(container, "实际墙长", `${plan.usedLength}mm`);
   appendMetric(container, "排布层数", `${plan.rows} 层`);
   appendMetric(container, "墙厚方向", `${plan.wythes} 皮`);
 }

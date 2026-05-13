@@ -79,7 +79,7 @@ function createRowPattern(wallLength, mortar, staggered) {
     cursor += STANDARD_BRICK.length + mortar;
   }
 
-  if (!staggered && wallLength - cursor >= STANDARD_BRICK.length / 2) {
+  if (wallLength - cursor >= STANDARD_BRICK.length / 2) {
     bricks.push({ x: cursor, length: STANDARD_BRICK.length / 2, kind: "half" });
   }
 
@@ -131,7 +131,8 @@ export function createWallPlan(rawInput) {
     fullBricks,
     halfBricks,
     pieceCount: fullBricks + halfBricks,
-    purchaseBricks: fullBricks + Math.floor(halfBricks / 2),
-    usedHeight: usedLength(rows, STANDARD_BRICK.height, mortar.size)
+    purchaseBricks: fullBricks + Math.ceil(halfBricks / 2),
+    usedHeight: usedLength(rows, STANDARD_BRICK.height, mortar.size),
+    usedLength: usedLength(mortar.columns, STANDARD_BRICK.length, mortar.size)
   };
 }
